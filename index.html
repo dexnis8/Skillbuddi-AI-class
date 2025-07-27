@@ -221,6 +221,73 @@
           transform: translateX(0);
         }
       }
+      .about-section {
+        background: linear-gradient(135deg, #fff7f7 60%, #ffe5e5 100%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 4rem 1rem;
+        border-radius: 16px;
+        box-shadow: 0 8px 32px rgba(244, 67, 54, 0.08);
+        margin-bottom: 2rem;
+        gap: 2rem;
+        animation: fadeIn 1.2s ease-in-out;
+      }
+      .about-img {
+        flex: 1 1 250px;
+        max-width: 320px;
+        border-radius: 16px;
+        box-shadow: 0 4px 16px rgba(244, 67, 54, 0.12);
+        overflow: hidden;
+        min-width: 180px;
+        height: 220px;
+        object-fit: cover;
+      }
+      .about-content {
+        flex: 2 1 350px;
+        background: #fff;
+        border-radius: 16px;
+        box-shadow: 0 2px 12px rgba(244, 67, 54, 0.07);
+        padding: 2rem 2.5rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        min-width: 220px;
+      }
+      .about-content h2 {
+        color: #f44336;
+        margin-bottom: 1rem;
+        font-size: 2.2rem;
+        letter-spacing: 1px;
+      }
+      .about-content p {
+        font-size: 1.15rem;
+        color: #444;
+        margin-bottom: 1.2rem;
+      }
+      .about-highlight {
+        display: inline-block;
+        background: #f44336;
+        color: #fff;
+        padding: 0.25rem 0.75rem;
+        border-radius: 8px;
+        font-size: 1rem;
+        margin-bottom: 0.8rem;
+        font-weight: 600;
+        letter-spacing: 0.5px;
+      }
+      @media (max-width: 900px) {
+        .about-section {
+          flex-direction: column;
+          padding: 2.5rem 1rem;
+        }
+        .about-content {
+          padding: 1.5rem 1rem;
+          align-items: center;
+          text-align: center;
+        }
+      }
       @media (max-width: 768px) {
         html {
           scroll-padding-top: 120px;
@@ -283,12 +350,23 @@
     </section>
 
     <section id="about" class="section">
-      <h2>About Us</h2>
-      <p style="text-align: center; max-width: 700px; margin: auto">
-        We are a passionate team delivering flavorful and authentic dishes
-        crafted with the finest ingredients. Our mission is to serve joy through
-        every meal.
-      </p>
+      <div class="about-section">
+        <img
+          class="about-img"
+          src="https://images.unsplash.com/photo-1550547660-d9450f859349"
+          alt="Chef cooking in kitchen"
+        />
+        <div class="about-content">
+          <span class="about-highlight">Our Story</span>
+          <h2>About Us</h2>
+          <p>
+            We are a passionate team delivering flavorful and authentic dishes
+            crafted with the finest ingredients.<br />
+            Our mission is to serve joy through every meal, blending tradition
+            with creativity for an unforgettable dining experience.
+          </p>
+        </div>
+      </div>
     </section>
 
     <section id="trending" class="section">
